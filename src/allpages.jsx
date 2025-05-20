@@ -1,4 +1,4 @@
-import './App.css';
+import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 
 import Header from './Components/Header';
@@ -18,17 +18,15 @@ import OurTeam from './Pages/OurTeam';
 import Achievements from './Pages/Achievements';
 import Certifications from './Pages/Certifications';
 import Login from './Pages/Login';
-// New Routes
-import CrowdFunding from "./Pages/CrowdFunding";
-import OurSolution from "./Pages/OurSolution";
-import YourProblem from "./Pages/YourProblem";
-import OurProject from "./Pages/OurProject";
-import LoginCoordinator  from "./Pages/LoginCoordinator"
+import CrowdFunding from './Pages/CrowdFunding';
+import OurSolution from './Pages/OurSolution';
+import YourProblem from './Pages/YourProblem';
+import OurProject from './Pages/OurProject';
+import LoginCoordinator from './Pages/LoginCoordinator';
 import LoginManager from './Pages/LoginManager';
 import Community from './Pages/Community';
 
-
-function App() {
+const AllPages = () => {
   return (
     <>
       <Header />
@@ -42,31 +40,22 @@ function App() {
         <Route path="/donors" element={<Donors />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/contact" element={<Contact />} />
-           <Route path="/about-us" element={<AboutUs />} />
+        <Route path="/about-us" element={<AboutUs />} />
         <Route path="/management-team" element={<ManagementTeam />} />
         <Route path="/our-team" element={<OurTeam />} />
         <Route path="/achievements" element={<Achievements />} />
         <Route path="/certifications" element={<Certifications />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/Community " element={<Community />} />
-
-{/* New Dropdown Pages */}
+        <Route path="/community" element={<Community />} />
         <Route path="/crowd-funding" element={<CrowdFunding />} />
         <Route path="/our-solution" element={<OurSolution />} />
         <Route path="/your-problem" element={<YourProblem />} />
         <Route path="/our-project" element={<OurProject />} />
-
-
-  {/* Login Routes */}
         <Route path="/login/coordinator" element={<LoginCoordinator />} />
         <Route path="/login/manager" element={<LoginManager />} />
-
-
-
-
       </Routes>
     </>
   );
-}
+};
 
-export default App;
+export default AllPages;
